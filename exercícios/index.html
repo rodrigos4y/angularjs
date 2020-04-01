@@ -16,6 +16,15 @@
                 <!-- Utiliza o track by para caso haja elementos repetidos na lista-->
                 <li ng-repeat = "item in myList track by $index">{{ item }} - {{ $index }}</li>
             </ul>
+
+            <div ng-init = "myStyle = { 'color' : 'blue'}">
+                <p ng-style = "myStyle">Treinaweb</p>
+                <button ng-click = "myStyle = { 'color' : 'red'}">Click</button>
+            </div>
+
+            <div ng-init = "myClasses = 'firstClass secondClass'">
+                <p ng-class = "[{'a' : true, 'b' : false}, myClasses]">Treinaweb</p>
+            </div>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
