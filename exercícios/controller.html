@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercícios Angularjs</title>
+
+    </head>
+    <body ng-app="myApp">
+
+        <div ng-controller = "myController as vm">
+            <input type = "text" ng-model = "vm.title">
+            {{ vm.title }}
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.7.9/angular-route.min.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/myController.js"></script>
+    </body>
+</html>
