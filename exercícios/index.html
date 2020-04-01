@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercícios Angularjs</title>
+
+    </head>
+    <body ng-app="myApp">
+
+        <div ng-init = "isVisible = true">
+            <p>App AngularJS: {{5 + 2}}</p>
+            <span ng-if="isVisible">Treinaweb</span> <!-- Prefira esse -->
+            <span ng-show="isVisible">Treinaweb</span>
+
+            <ul ng-init = "myList = [1, 2, 3, 1]">
+                <!-- Utiliza o track by para caso haja elementos repetidos na lista-->
+                <li ng-repeat = "item in myList track by $index">{{ item }} - {{ $index }}</li>
+            </ul>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.7.9/angular-route.min.js"></script>
+
+        <script>
+            angular.module("myApp", []);
+
+            
+        </script>
+    </body>
+</html>
