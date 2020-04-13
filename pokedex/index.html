@@ -14,7 +14,7 @@
             <input type="text" id="pokeFilter" placeholder="Search" ng-model = "vm.searchText">
 
             <ul class="poke-list" id="pokeList">
-                <poke-list-item-component ng-repeat="pkm in vm.pkmList" pkm = 'pkm'></poke-list-item-component>
+                <poke-list-item-component ng-repeat="pkm in vm.pkmList | filter:vm.searchText" pkm = 'pkm'></poke-list-item-component>
             </ul>
         </div>
 
@@ -26,5 +26,6 @@
         <script src="js/components/pokeListItem/pokeListItemComponent.js"></script>
         <script src="js/directives/RollOnScrollDirective.js"></script>
         <script src="js/services/pokeApiFactory.js"></script>
+        <script src="js/filters/numberFormatterFilter.js"></script>
     </body>
 </html>

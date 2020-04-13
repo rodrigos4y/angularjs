@@ -4,11 +4,11 @@ angular.module('pokedexApp')
 function PokeApiFactory(){
     return {
         pkmList : [
-            {name : 'Bulbasaur', number  :'001'},
-            {name : 'Pikachu', number  :'025'},
-            {name : 'Mew', number  :'151'},
-            {name : 'Chikorita', number  :'152'},
-            {name : 'Celebi', number  :'251'},
+            {name : 'Bulbasaur', number  : 1},
+            {name : 'Pikachu', number  : 25},
+            {name : 'Mew', number  : 151},
+            {name : 'Chikorita', number  : 152},
+            {name : 'Celebi', number  : 251},
         ]
     }
 }
