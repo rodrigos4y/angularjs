@@ -9,6 +9,7 @@ function myController($http)
     var vm = this;
     vm.title = 'Hello World!';
     vm.repositories = [];
+    vm.cursos = [];
 
     vm.print = function(value){
         console.log(value);
@@ -16,10 +17,10 @@ function myController($http)
 
     $http({
         'method' : 'GET',
-        'url' : 'https://api.github.com/search/repositories?q=angular'
+        'url' : 'https://rdfreitas.com.br/json/cursos.json'
     })
     .then(function(response){
-        vm.repositories = response.data.items;
+        vm.cursos = response.data.certificados;
     })
 
     
