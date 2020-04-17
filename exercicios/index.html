@@ -25,6 +25,13 @@
             <div ng-init = "myClasses = 'firstClass secondClass'">
                 <p ng-class = "[{'a' : true, 'b' : false}, myClasses]">Treinaweb</p>
             </div>
+            <form name = "myForm" novalidate>
+                <label>Teste de validação de campo em um formulário</label><br>
+                <input type="text" name="myName" required ng-model = "myName">
+                <div ng-show = "myForm.myName.$invalid && myForm.myName.$dirty">
+                    O campo é obrigatório
+                </div>
+            </form>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
